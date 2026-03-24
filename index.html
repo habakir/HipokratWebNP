@@ -562,6 +562,32 @@
   }
   .modal-cta { display: inline-block; text-decoration: none; }
 
+  .modal-img {
+    height: 180px;
+    margin: -2.5rem -2.5rem 2rem;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(135deg, var(--navy) 0%, #1a4a6e 100%);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .modal-img img { width: 100%; height: 100%; object-fit: cover; }
+  .modal-img-icon { width: 72px; height: 72px; color: rgba(255,255,255,.15); }
+  .modal-links {
+    display: flex; gap: .75rem; flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .modal-link {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .55rem 1rem;
+    border: 1.5px solid var(--light);
+    border-radius: 8px;
+    font-size: .82rem; font-weight: 600;
+    color: var(--navy); text-decoration: none;
+    transition: border-color .2s, background .2s;
+  }
+  .modal-link:hover { border-color: var(--teal); background: var(--cream); }
+  .modal-link svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--teal); }
+
   .programs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1076,554 +1102,234 @@
   <!-- REDOVNO panel -->
   <div class="mode-panel active" id="panel-redovno">
 
-    <!-- ── HIPOKRAT ── -->
-    <div class="school-block">
-      <div class="school-header">
-        <div class="school-header-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+    <div class="stepen-section">
+      <div class="stepen-label">IV stepen — 4 godine</div>
+      <div class="programs-grid">
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Medicinska sestra – tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Medicinska sestra-tehničar radi na promociji zdravlja, prevenciji i lečenju bolesti. Obavlja osnove medicinske nege — praćenje vitalnih funkcija, asistencija u terapijskim procedurama, primena lekova i vođenje medicinske dokumentacije u bolnicama, ambulantama i domovima zdravlja." data-posao="Bolnica, dom zdravlja, ambulanta, hitna pomoć, privatna klinika, dom za stare." data-plan="http://www.skolahipokrat.edu.rs/smerovi-obrazovanja/medicinska-sestra-tehnicar/" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h4>Medicinska sestra – tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
         </div>
-        <div>
-          <div class="school-header-name">Medicinska škola Hipokrat</div>
-          <div class="school-header-areas">Zdravstvo i socijalna zaštita · Lične usluge</div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Fizioterapeutski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Fizioterapeutski tehničar primenjuje fizikalne procedure u rehabilitaciji i lečenju pacijenata: masažu, elektroterapiju, hidroterapiju i kineziterapiju. Radi pod nadzorom starijih fizioterapeuta u rehabilitacionim centrima i bolnicama. Za ovaj poziv potrebni su strpljenje i izdržljivost." data-posao="Bolnica, rehabilitacioni centar, privatna ordinacija, sportski klub, banja." data-plan="http://www.skolahipokrat.edu.rs/wp-content/uploads/2013/12/FZT-2015.pdf" data-pitanja="http://www.skolahipokrat.edu.rs/wp-content/uploads/2013/12/Fizioterapeutski-tehnicar-novi-plan-2015-v3.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h4>Fizioterapeutski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
         </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Farmaceutski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Farmaceutski tehničar je jedno od najpopularnijih zanimanja. Program stavlja naglasak na teorijska znanja i praktične kompetencije: rad s farmaceutskom opremom, merenje, pakovanje i etiketiranje lekova, farmaceutsko-tehnološke operacije, prijem i skladištenje farmaceutskih proizvoda." data-posao="Apoteka, bolnička apoteka, farmaceutska kompanija, laboratorija." data-plan="http://www.skolahipokrat.edu.rs/farmaceutski-tehnicar/" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
+          <h4>Farmaceutski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Medicinska sestra vaspitač" data-stepen="IV stepen" data-duration="4 godine" data-opis="Medicinska sestra vaspitač radi u jaslicama sa zdravom decom uzrasta 1–3 godine na poslovima nege i vaspitanja. Brine o prijemu dece, higijenskim procedurama, ishrani, pripremi preventivnih pregleda, saradnji s roditeljima i planiranju vaspitno-obrazovnih aktivnosti." data-posao="Jaslice, vrtić, dečji dom, predškolska ustanova, bolnica – dečje odeljenje." data-plan="http://www.skolahipokrat.edu.rs/files/MSV.pdf" data-pitanja="http://www.skolahipokrat.edu.rs/wp-content/uploads/2013/12/MEDICINSKA-SESTRA-VASPITAC-v2.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          <h4>Medicinska sestra vaspitač</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Kozmetički tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Kozmetički tehničar obavlja terapeutske i estetske tretmane lica i tela: negu kože, masažu, hidro-procedure, fototerapiju, elektroterapiju, elektroepilaciju i krioterapiju. Program priprema za samostalan rad u kozmetičkim salonima i SPA centrima." data-posao="Kozmetički salon, SPA centar, hotel, privatna praksa." data-plan="http://www.skolahipokrat.edu.rs/wp-content/uploads/2013/12/KZT-2015.pdf" data-pitanja="http://www.skolahipokrat.edu.rs/wp-content/uploads/2013/12/Kozmeticki-tehnicar-novi-plan-2015-v3.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></div>
+          <h4>Kozmetički tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Stomatološka sestra – tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Stomatološka sestra-tehničar asistira stomatologu u svim fazama zahvata: priprema pacijenta i radnog mesta, sterilizacija i dezinfekcija instrumenata, mešanje materijala, vođenje dokumentacije, održavanje opreme i pružanje prve pomoći." data-posao="Stomatološka ordinacija, bolnica – stomatološko odeljenje, klinika." data-plan="http://www.skolahipokrat.edu.rs/stomatoloska-sestra-tehnicar/" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>Stomatološka sestra – tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Laboratorijski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Laboratorijski tehničar radi s biološkim materijalima u medicinskim, biohemijskim i farmaceutskim laboratorijama. Obavlja: prijem pacijenata i uzorkovanje, pripremu reagenasa, biohemijske analize krvi i urina, hematološke i bakteriološke analize. Posao zahteva preciznost i stručnost." data-posao="Bolnička laboratorija, biohemijska laboratorija, zavod za javno zdravlje, farmaceutska kompanija." data-plan="http://www.skolahipokrat.edu.rs/laboratorijski-tehnicar/" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+          <h4>Laboratorijski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Pedijatrijska sestra" data-stepen="IV stepen" data-duration="4 godine" data-opis="Pedijatrijska sestra pruža zdravstvenu negu i zaštitu dece od rođenja do adolescencije — prati rast i razvoj, sprovodi imunizacioni program, zbrinjava urgentna pedijatrijska stanja i sarađuje s roditeljima." data-posao="Bolnica – pedijatrija, dom zdravlja, vrtić, škola, dečji dom." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h4>Pedijatrijska sestra</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Ginekološko-akušerska sestra" data-stepen="IV stepen" data-duration="4 godine" data-opis="Ginekološko-akušerska sestra brine o trudnicama, porodiljama i ginekološkim pacijentima. Asistira pri porođaju i ginekološkim pregledima, pruža prenatalnu i postnatalnu negu i edukuje pacijente o reproduktivnom zdravlju." data-posao="Bolnica – ginekologija, porodilište, dom zdravlja, privatna klinika." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/></svg></div>
+          <h4>Ginekološko-akušerska sestra</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Sanitarno-ekološki tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Sanitarno-ekološki tehničar kontroliše sanitarno-higijenske uslove u prehrambenim i zdravstvenim objektima, vodosnabdevanju i zaštiti životne sredine. Sprovodi sanitarnu inspekciju i primenjuje ekološke mere zaštite." data-posao="Zavod za javno zdravlje, sanitarna inspekcija, prehrambena industrija, komunalna preduzeća." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>Sanitarno-ekološki tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Zubni tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Zubni tehničar izrađuje zubne proteze, krunice, mostove, ortodontske aparate i implantate u zubotehničkim laboratorijama. Program uključuje rad s dentalnim materijalima i tehničku izradu protetičkih radova prema uputstvima stomatologa." data-posao="Zubotehnička laboratorija, stomatološka klinika, privatna ordinacija." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h4>Zubni tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Ekonomski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Ekonomski tehničar istražuje kako društvo koristi ograničene resurse — sirovine, rad i kapital — za proizvodnju dobara i usluga. Analizira troškove, cene, zaposlenost i ekonomske trendove za preduzeća, banke, fondove i državne institucije." data-posao="Preduzeće, banka, osiguravajuće društvo, računovodstvena agencija, javna ustanova." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/06/Ekonomski_tehnicar_9_2019.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/06/EKONOMSKI-TEHNICAR-2019-v3.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h4>Ekonomski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Finansijski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Finansijski tehničar vodi poslovne knjige, izrađuje finansijske izveštaje i planira budžet preduzeća. Program obuhvata bankarske operacije, poreski sistem i upravljanje finansijama organizacija." data-posao="Banka, finansijska institucija, računovodstvena agencija, preduzeće, osiguranje." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <h4>Finansijski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Carinski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Carinski tehničar obavlja poslove carinske administracije i kontrole međunarodne trgovine. Program je usmeren na modernizaciju carinske službe, prilagođavanje EU standardima i liberalizovanu trgovinu Srbije s inostranstvom." data-posao="Carinska uprava, spedicija, logistička kompanija, uvozno-izvozna firma." data-plan="http://www.skolahipokrat.edu.rs/smerovi-obrazovanja/carinski-tehnicar/" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+          <h4>Carinski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Pravno-poslovni tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Pravno-poslovni tehničar obavlja poslove pravno-poslovne administracije: obradu dokumentacije, pripremu pravnih akata, kadrovsku administraciju i organizaciju poslovnih aktivnosti. Program obuhvata građansko, radno i privredno pravo." data-posao="Advokatura, sud, javna uprava, preduzeće, notarska kancelarija." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2021/06/Pravno_poslovni_tehnicar_6_2019.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/06/PRAVNO-POSLOVNI-TEHNICAR-v2.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h4>Pravno-poslovni tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Tehničar obezbeđenja" data-stepen="IV stepen" data-duration="4 godine" data-opis="Tehničar obezbeđenja organizuje fizičko i tehničko obezbeđenje, upravlja sistemima video-nadzora i kontrole pristupa, izrađuje planove zaštite imovine i procenjuje bezbednosne rizike. Program uključuje krizni menadžment i zakonsku regulativu." data-posao="Agencija za obezbeđenje, kompanija, javna ustanova, aerodrom, tržni centar." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>Tehničar obezbeđenja</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Turistički tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Turistički tehničar organizuje i prodaje turističke aranžmane, posreduje u ugostiteljskim uslugama i koordinira posete kulturnim destinacijama. Za ovaj poziv su neophodne odlične organizatorske sposobnosti, komunikativnost i znanje stranih jezika." data-posao="Turistička agencija, hotel, kongresni centar, aerodrom, turoperator." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/09/TURISTICKI-TEHNICAR-11_2022.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/09/TURISTICKI-TEHNICAR-v2.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+          <h4>Turistički tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Kulinarski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Kulinarski tehničar priprema složena jela, kreira menije i vodi kuhinju restorana. Program uključuje nutricionizam, sanitarnu higijenu i upravljanje kuhinjskim osobljem. Razvija kreativnost i visoke standarde gastronomske struke." data-posao="Restoran, hotel, catering kompanija, privatna kuhinja." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+          <h4>Kulinarski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Ugostiteljski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Ugostiteljski tehničar organizuje ugostiteljske usluge, opsluži goste i upravlja ugostiteljskim objektom. Program uključuje somelijerstvo, bonton, recepcijsko poslovanje i upravljanje pansionskim uslugama." data-posao="Hotel, restoran, bar, catering, kongresni centar." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <h4>Ugostiteljski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Tehničar drumskog saobraćaja" data-stepen="IV stepen" data-duration="4 godine" data-opis="Tehničar drumskog saobraćaja organizuje prevoz putnika i tereta, upravlja saobraćajnom logistikom i brine o bezbednosti u drumskom saobraćaju. Program uključuje obaveznu vozačku obuku za kategoriju B i poznavanje vozačke psihologije." data-posao="Transportna kompanija, logistika, autobusni prevoz, MUP, vozačka škola." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2021/06/TEHNICAR_DRUMSKOG_SAOBRACAJA_2018_4_2019-17.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/05/TDS-stari-i-novi-plan.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h4>Tehničar drumskog saobraćaja</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Tehničar zaštite od požara" data-stepen="IV stepen" data-duration="4 godine" data-opis="Tehničar zaštite od požara pokriva dve oblasti: preventivne mere (fizičko-hemijska svojstva zapaljivih materijala, analiza požarnog opterećenja) i gašenje požara (teorija gorenja, vatrogasna oprema, taktika gašenja). Program stavlja naglasak na timski rad i disciplinu." data-posao="Vatrogasna služba, preduzeće, fabrika, javna ustanova, protivpožarna inspekcija." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 01-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></div>
+          <h4>Tehničar zaštite od požara</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Tehničar vuče" data-stepen="IV stepen" data-duration="4 godine" data-opis="Tehničar vuče upravlja i održava lokomotive i šinska vozila u železničkom saobraćaju. Program obuhvata elektrotehničke sisteme lokomotive, principe železničkog saobraćaja i bezbednost vučnih sistema." data-posao="Srpske železnice, privatni železnički operateri, industrijska postrojenja." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="14" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="7" y1="16" x2="7" y2="22"/><line x1="17" y1="16" x2="17" y2="22"/></svg></div>
+          <h4>Tehničar vuče</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Mašinski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Mašinski tehničar planira i nadzire metaloprerađivačke operacije, projektuje mašinske elemente i upravljač procesima u industrijskom okruženju. Program razvija preciznost, odgovornost i komunikacijske sposobnosti." data-posao="Fabrika, servis mašina, građevinska kompanija, auto-industrija." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/MASINSKI-TEHNICAR.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/Masinski-tehnicar2.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+          <h4>Mašinski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Geodetski tehničar" data-stepen="IV stepen" data-duration="4 godine" data-opis="Geodetski tehničar vrši premer terena, obrađuje geodetske podatke za katastar i inženjering. Kompetencije obuhvataju topografska snimanja, GPS i GIS tehnologije, uspostavljanje katastra i inženjering-geodetska merenja." data-posao="Geodetski zavod, građevinska kompanija, lokalna samouprava, projektni biro." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/GEODETSKI-TEHNICAR-GEOMETAR.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/Geodetski-tehnicar.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
+          <h4>Geodetski tehničar</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Elektrotehničar energetike" data-stepen="IV stepen" data-duration="4 godine" data-opis="Elektrotehničar energetike instalira i održava elektroenergetske sisteme i elektroinstalaterske radove. Program obuhvata električna postrojenja, merenja, zaštitne sisteme i bezbednost pri radu pod naponom." data-posao="Elektroprivreda, fabrika, građevinska firma, elektroinstalaterska kompanija." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h4>Elektrotehničar energetike</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Elektrotehničar računara" data-stepen="IV stepen" data-duration="4 godine" data-opis="Elektrotehničar računara instalira, konfiguriše i održava računarske sisteme i mreže. Program uključuje operativne sisteme, mrežnu bezbednost, hardversku dijagnostiku i programerske osnove." data-posao="IT kompanija, servis elektronike, preduzeće, škola, telekomunikacije." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h4>Elektrotehničar računara</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Filološka gimnazija" data-stepen="IV stepen" data-duration="4 godine" data-opis="Filološka gimnazija pruža opšte obrazovanje s profilisanjem u jezike i književnost. Intenzivna nastava stranih jezika priprema učenike za studije filologije, prevođenja i humanističkih nauka." data-posao="Fakultet filologije, prevođenje, novinarstvo, diplomatija, nastava." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+          <h4>Filološka gimnazija</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Gimnazija opšteg smera" data-stepen="IV stepen" data-duration="4 godine" data-opis="Gimnazija opšteg smera pruža sveobuhvatno opšte obrazovanje iz prirodnih i društvenih nauka. Razvija kritičko mišljenje i naučni pristup i priprema učenike za upis na bilo koji fakultet ili visokoškolsku ustanovu." data-posao="Sve visokoškolske ustanove i fakulteti u Srbiji i inostranstvu." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2013/12/Gimnazija-opsti-tip.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2013/12/Gimnazija-ispitna-pitanja.docx">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></div>
+          <h4>Gimnazija opšteg smera</h4><span class="prog-badge badge-iv">IV stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
       </div>
+    </div><!-- /iv stepen -->
 
-      <div class="stepen-section">
-        <div class="stepen-label">IV stepen — 4 godine</div>
-        <div class="programs-grid">
+    <div class="stepen-section">
+      <div class="stepen-label">III stepen — 3 godine</div>
+      <div class="programs-grid">
 
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Medicinska sestra – tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Osposobljava za zdravstvenu negu pacijenata u bolnicama, domovima zdravlja i ambulantama. Program obuhvata anatomiju, fiziologiju, farmakologiju, kliničku praksu i medicinsku etiku."
-            data-posao="Bolnica, dom zdravlja, ambulanta, hitna pomoć, privatna klinika, dom za stare.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <h4>Medicinska sestra – tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Fizioterapeutski tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Primena fizikalnih procedura u rehabilitaciji i lečenju pacijenata: masaža, elektroterapija, hidroterapija i kineziterapija. Uključuje opsežnu kliničku praksu."
-            data-posao="Bolnica, rehabilitacioni centar, privatna ordinacija, sportski klub, banja.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <h4>Fizioterapeutski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Farmaceutski tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Priprema, izdavanje i kontrola lekova i farmaceutskih preparata. Program uključuje farmakologiju, hemiju, farmaceutsku tehnologiju i praktičan rad u apoteci."
-            data-posao="Apoteka, bolnička apoteka, farmaceutska kompanija, laboratorija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
-            <h4>Farmaceutski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Medicinska sestra vaspitač" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Zdravstvena zaštita i vaspitno-obrazovni rad sa decom predškolskog uzrasta. Kombinuje pedagoška znanja sa medicinskom negom i razvojnom psihologijom."
-            data-posao="Vrtić, dečji dom, predškolska ustanova, bolnica – dečje odeljenje.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-            <h4>Medicinska sestra vaspitač</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Kozmetički tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Kozmetički tretmani lica i tela, manikir, pedikir, epilacija i nega kože. Program uključuje dermatologiju, kozmetičku hemiju i praktičan rad sa klijentima."
-            data-posao="Kozmetički salon, SPA centar, hotel, privatna praksa, bolnica.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></div>
-            <h4>Kozmetički tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Stomatološka sestra – tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Asistencija stomatologu tokom zahvata, sterilizacija instrumenata, priprema materijala i vođenje stomatološke dokumentacije. Obuhvata i komunikaciju sa pacijentima."
-            data-posao="Stomatološka ordinacija, bolnica – stomatološko odeljenje, klinika.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <h4>Stomatološka sestra – tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Laboratorijski tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Izvođenje medicinskih i biohemijskih laboratorijskih analiza: krvna slika, urin, biopsije. Program uključuje mikrobiologiju, biohemiju i laboratorijsku opremu."
-            data-posao="Bolnička laboratorija, biohemijska laboratorija, zavod za javno zdravlje, farmaceutska kompanija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
-            <h4>Laboratorijski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Pedijatrijska sestra" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Zdravstvena nega i zaštita dece od rođenja do adolescencije. Obuhvata praćenje rasta i razvoja, imunizaciju, hitnu pedijatriju i komunikaciju sa roditeljima."
-            data-posao="Bolnica – pedijatrija, dom zdravlja, vrtić, škola, dečji dom.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <h4>Pedijatrijska sestra</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Ginekološko-akušerska sestra" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Zdravstvena nega trudnica, porodilja i ginekoloških pacijenata. Asistencija pri porođaju, prenatalna i postnatalna nega, planiranje porodice."
-            data-posao="Bolnica – ginekologija, porodilište, dom zdravlja, privatna klinika.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/></svg></div>
-            <h4>Ginekološko-akušerska sestra</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Sanitarno-ekološki tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Kontrola sanitarno-higijenskih uslova u prehrambenim i zdravstvenim objektima, vodosnabdevanju i zaštiti životne sredine. Obuhvata sanitarnu inspekciju i ekologiju."
-            data-posao="Zavod za javno zdravlje, sanitarna inspekcija, prehrambena industrija, komunalna preduzeća.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <h4>Sanitarno-ekološki tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Zubni tehničar" data-skola="Medicinska škola Hipokrat"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Izrada zubnih proteza, krunica, mostova, ortodontskih aparata i implantata u zubotehničkim laboratorijama. Program uključuje stomatološke materijale i tehničku izradu."
-            data-posao="Zubotehnička laboratorija, stomatološka klinika, privatna ordinacija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h4>Zubni tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Zdravstveni negovatelj" data-stepen="III stepen" data-duration="3 godine" data-opis="Zdravstveni negovatelj pruža osnovnu zdravstvenu negu nepokretnim i polupokretnim pacijentima pod nadzorom medicinskog osoblja. Odgovornosti: sređivanje kreveta, preokretanje pacijenata, higijenu, oblačenje, ishranu i praćenje stanja. Program ima 40% praktičnih vežbi." data-posao="Dom za stare, bolnica, kućna nega, dom zdravlja, socijalne ustanove." data-plan="http://www.skolahipokrat.edu.rs/zdravstveni-negovatelj/" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h4>Zdravstveni negovatelj</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
         </div>
-      </div><!-- /iv hipokrat -->
 
-      <div class="stepen-section">
-        <div class="stepen-label">III stepen — 3 godine</div>
-        <div class="programs-grid">
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Zdravstveni negovatelj" data-skola="Medicinska škola Hipokrat"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Osnovna zdravstvena nega nepokretnih i polupokretnih pacijenata pod nadzorom medicinskog osoblja. Pomoć u svakodnevnim aktivnostima i pratnja pacijenata."
-            data-posao="Dom za stare, bolnica, kućna nega, dom zdravlja, socijalne ustanove.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <h4>Zdravstveni negovatelj</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Ženski frizer" data-skola="Medicinska škola Hipokrat"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Friziranje, bojenje, trajno i privremeno uvijanje kose, šišanje i kreiranje različitih ženskih frizura. Uključuje negu kose i rad sa frizerskom opremom."
-            data-posao="Frizerski salon, SPA centar, hotel, pozorišna scena, televizija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-            <h4>Ženski frizer</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Muški frizer" data-skola="Medicinska škola Hipokrat"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Šišanje, brijanje, oblikovanje brade i brkova, muški frizerski tretmani i nega kose. Program uključuje klasične i moderne tehnike muškog frizerstva."
-            data-posao="Muški frizerski salon, berbernica, hotel, SPA centar.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></div>
-            <h4>Muški frizer</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Ženski frizer" data-stepen="III stepen" data-duration="3 godine" data-opis="Ženski frizer frizeruje, boji, trajno i privremeno kovrdža kosu i oblikuje različite ženske frizure. Program uključuje negu kose, rad s frizerskom opremom i praćenje modnih trendova u frizerstvu." data-posao="Frizerski salon, SPA centar, hotel, pozorišna scena, televizija." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h4>Ženski frizer</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
         </div>
-      </div><!-- /iii hipokrat -->
-    </div><!-- /school-block hipokrat -->
 
-    <!-- ── SVETI NIKOLA ── -->
-    <div class="school-block">
-      <div class="school-header">
-        <div class="school-header-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Muški frizer" data-stepen="III stepen" data-duration="3 godine" data-opis="Muški frizer šiša, brije i oblikuje bradu i brkove u skladu s klasičnim i modernim tehnikama muškog frizerstva. Program uključuje negu kose i savremene muške frizerske trendove." data-posao="Muški frizerski salon, berbernica, hotel, SPA centar." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></div>
+          <h4>Muški frizer</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
         </div>
-        <div>
-          <div class="school-header-name">Škola Sveti Nikola</div>
-          <div class="school-header-areas">Ekonomija · Pravo · Saobraćaj · Mašinstvo · Elektrotehnika · Ugostiteljstvo · Građevina · Gimnazija</div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Kuvar" data-stepen="III stepen" data-duration="3 godine" data-opis="Kuvar priprema sve vrste toplih i hladnih jela, odabira i priprema namirnice, određuje tehnologiju prerade i komponuje menije. Radi u prehrambenu industriji ili samostalnim ugostiteljskim objektima. Na svaka 6 meseci obavlja sanitarni pregled." data-posao="Restoran, hotel, kantina, catering, fast food, bolnica." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2013/10/KUVAR.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2013/10/KUVAR-III-stepen1.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+          <h4>Kuvar</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
         </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Konobar" data-stepen="III stepen" data-duration="3 godine" data-opis="Konobar opsluži goste u ugostiteljskim objektima: servira hranu i piće, postavlja i sklanja stolove, vrši naplatu i preporučuje specijalitete. Komunikativnost, ljubaznost i uredan izgled su ključni za uspeh u ovom pozivu." data-posao="Kafić, restoran, hotel, catering, krstarica." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg></div>
+          <h4>Konobar</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Poslastičar" data-stepen="III stepen" data-duration="3 godine" data-opis="Poslastičar ručno ili s električnom opremom izrađuje torte, kreme, sladolede i konditorsku robu. Radi u industrijskoj proizvodnji, poslastičarnicama i hotelskim kuhinjama. Posao zahteva finu motoriku, dobro oko za detalje i razvijen osećaj za ukus i boju." data-posao="Poslastičarnica, pekara, restoran, hotel, privatna radionica." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2013/12/POSLASTICAR.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2013/12/POSLASTICAR-III-stepen1.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+          <h4>Poslastičar</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Vozač motornih vozila" data-stepen="III stepen" data-duration="3 godine" data-opis="Vozač motornih vozila upravlja putničkim, teretnim i zglobnim vozilima. Program uključuje osnove održavanja vozila i obaveznu prevoznu dokumentaciju. Završetkom programa stiče se osnova za profesionalnu vozačku karijeru." data-posao="Transportna kompanija, autobusni prevoz, dostava, taxi." data-plan="" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/05/Vozac-motornih-vozila-III-stepen-v2.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h4>Vozač motornih vozila</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Mesar" data-stepen="III stepen" data-duration="3 godine" data-opis="Mesar se osposobljava za obradu, preradu i prodaju mesa i mesnih prerađevina. Ključne kompetencije: klanje, rasecanje i priprema mesa, upravljanje mesnicicom. Program uključuje HACCP standarde i prehrambenu higijenu." data-posao="Mesara, klanica, prehrambena industrija, supermarket." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/MESAR.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/Mesar.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+          <h4>Mesar</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Pekar" data-stepen="III stepen" data-duration="3 godine" data-opis="Pekar priprema i peče hleb, peciva, pite i testa. Program obuhvata različite vrste brašna, fermentaciju, pripremu raznih vrsta testa i organizaciju pekarske proizvodnje. Uključuje HACCP principe i standarde bezbednosti hrane." data-posao="Pekara, fabrika hleba, hotel, restoran, konditorska industrija." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/PEKAR.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/Pekar.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 9V6a2 2 0 00-2-2H4a2 2 0 00-2 2v3"/><path d="M2 11c0-1.1.9-2 2-2h16a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3z"/></svg></div>
+          <h4>Pekar</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Bravar-zavarivač" data-stepen="III stepen" data-duration="3 godine" data-opis="Bravar-zavarivač planira i izvodi zavarivačke operacije, izrađuje metalne konstrukcije i sklapa metalne delove metodama REL, MIG, MAG, TIG, gasno zavarivanje i tvrdo lemljenje. Vrši kontrolu kvaliteta zavarenih spojeva." data-posao="Fabrika, automehanička radionica, brodogradilište, metalska industrija." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h4>Bravar-zavarivač</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Mašinbravar" data-stepen="III stepen" data-duration="3 godine" data-opis="Mašinbravar montira, demontira i popravlja mašinske sklopove, ležajeve i prenosne mehanizme. Obavlja struganje, glodanje i merenja. Radi u industrijskim preduzećima ili privatnim radionicama." data-posao="Fabrika, servisna radionica, industrija, energetika." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/MASINBRAVAR.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/Masinbravar-III1.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+          <h4>Mašinbravar</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Automehaničar" data-stepen="III stepen" data-duration="3 godine" data-opis="Automehaničar instalira, održava i popravlja delove motornih vozila: dijagnostikuje kvarove, servisira kočione i upravljačke sisteme i vrši funkcionalna ispitivanja. Program uključuje OBD dijagnostiku i rad s modernom servisnom opremom." data-posao="Auto-servis, diler vozila, transportna kompanija, rent-a-car." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/06/MEHANICAR-MOTORNIH-VOZILA.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2023/06/Mehanicar-motornih-vozila-III-v2.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+          <h4>Automehaničar</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal" onclick="openModal(this)" data-name="Zidar-fasader" data-stepen="III stepen" data-duration="3 godine" data-opis="Zidar-fasader kombinuje tradicionalne zidarske veštine s modernim fasadnim radovima: zida nosive i pregradne zidove, malterisa i postavlja fasadne sisteme. Stara, cenjena struka s dobrim izgledima za zapošljavanje." data-posao="Građevinska kompanija, privatna praksa, komunalna preduzeća." data-plan="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/zidar.pdf" data-pitanja="http://www.skolasvnikola.edu.rs/wp-content/uploads/2014/09/Zidar-fasader.zip">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h4>Zidar-fasader</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)" data-name="Armirač-betonirac" data-stepen="III stepen" data-duration="3 godine" data-opis="Armirač-betonirac postavlja armaturne mreže i šipke u oplatu i ugrađuje beton u konstrukcije mostova, zgrada i niskogradnje. Radi na infrastrukturnim i stambenim projektima." data-posao="Građevinska firma, niskogradnja, hidroizolacija, infrastrukturni projekti." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+          <h4>Armirač-betonirac</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
+        <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)" data-name="Trgovac" data-stepen="III stepen" data-duration="3 godine" data-opis="Trgovac nudi robu kupcima, prezentuje karakteristike proizvoda i upravlja zalihama u maloprodajnim objektima. Radi u robnim kućama, specijalizovanim prodavnicama i malim prodavnicama. Komunikativnost, taktičnost i strpljenje su ključni za uspeh." data-posao="Prodavnica, supermarket, tržni centar, kiosk, online prodaja." data-plan="" data-pitanja="">
+          <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+          <h4>Trgovac</h4><span class="prog-badge badge-iii">III stepen</span><span class="prog-hint">Detalji →</span>
+        </div>
+
       </div>
-
-      <div class="stepen-section">
-        <div class="stepen-label">IV stepen — 4 godine</div>
-        <div class="programs-grid">
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Ekonomski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Računovodstvo, finansije, ekonomska analiza i poslovanje preduzeća. Program obuhvata mikroekonomiju, knjigovodstvo, pravo, marketing i poslovnu komunikaciju."
-            data-posao="Preduzeće, banka, osiguravajuće društvo, računovodstvena agencija, javna ustanova.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h4>Ekonomski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Finansijski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Vođenje poslovnih knjiga, finansijsko planiranje, izrada finansijskih izveštaja i kontrola budžeta. Obuhvata bankarske operacije i poreski sistem."
-            data-posao="Banka, finansijska institucija, računovodstvena agencija, preduzeće, osiguranje.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-            <h4>Finansijski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Carinski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Obavljanje carinskih poslova, kontrola robe na graničnim prelazima, dokumentacija uvoza i izvoza. Program uključuje carinsko pravo i međunarodnu trgovinu."
-            data-posao="Carinska uprava, spedicija, logistička kompanija, uvozno-izvozna firma.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
-            <h4>Carinski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Pravno-poslovni tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Osnove prava, pravna administracija, vođenje dokumentacije i kancelarijsko poslovanje. Program uključuje građansko, radno i privredno pravo."
-            data-posao="Advokatura, sud, javna uprava, preduzeće, notarska kancelarija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-            <h4>Pravno-poslovni tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Tehničar obezbeđenja" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Fizičko i tehničko obezbeđenje, upravljanje sistemima nadzora, protivpožarna zaštita i zaštita imovine. Uključuje krizni menadžment i pravnu regulativu."
-            data-posao="Agencija za obezbeđenje, kompanija, javna ustanova, aerodrom, tržni centar.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <h4>Tehničar obezbeđenja</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Trgovinski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Organizacija i upravljanje prodajnim mestima, nabavka, upravljanje zalihama i marketing. Program uključuje ekonomiku trgovine i e-commerce."
-            data-posao="Supermarket, veletrgovinska kompanija, distribucija, tržni centar.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-            <h4>Trgovinski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Komercijalni tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Poslovi nabavke i prodaje robe, pregovaranje sa dobavljačima i kupcima, upravljanje ugovorima i tržišnim istraživanjima."
-            data-posao="Uvozno-izvozna kompanija, veleprodaja, marketinška agencija, preduzeće.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-            <h4>Komercijalni tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Turistički tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Organizacija turističkih putovanja, turistička animacija, hotelski menadžment i rad na recepciji. Program uključuje strane jezike i geografiju."
-            data-posao="Turistička agencija, hotel, kongresni centar, aerodrom, turoperator.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-            <h4>Turistički tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Kulinarski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Priprema složenih jela, kreiranje menija, upravljanje kuhinjom i vođenje kuhinjskog osoblja. Program uključuje nutricionizam i sanitarnu higijenu."
-            data-posao="Restoran, hotel, catering kompanija, TV emisija, privatna kuhinja.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-            <h4>Kulinarski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Ugostiteljski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Organizacija ugostiteljskih usluga, opsluga gostiju, upravljanje ugostiteljskim objektom i vođenje bara. Program uključuje somelijerstvo i bonton."
-            data-posao="Hotel, restoran, bar, catering, kongresni centar, krstarica.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-            <h4>Ugostiteljski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Tehničar drumskog saobraćaja" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Organizacija drumskog saobraćaja, logistika prevoza robe i putnika, upravljanje flotom vozila. Program uključuje saobraćajno pravo i špediciju."
-            data-posao="Transportna kompanija, logistika, autobusni prevoz, špedicija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-            <h4>Tehničar drumskog saobraćaja</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Tehničar zaštite od požara" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Protivpožarna zaštita, planovi evakuacije, upravljanje vatrogasnom opremom i procena rizika od požara. Program uključuje hemiju goriva i vatrogasnu taktiku."
-            data-posao="Vatrogasna služba, preduzeće, fabrika, javna ustanova, inspekcija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 01-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></div>
-            <h4>Tehničar zaštite od požara</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Tehničar vuče" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Upravljanje i održavanje lokomotiva i šinskih vozila u železničkom saobraćaju. Program uključuje elektrotehničke sisteme lokomotive i železnički saobraćaj."
-            data-posao="Srpske železnice, privatni železnički operateri, industrijska postrojenja.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="14" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="7" y1="16" x2="7" y2="22"/><line x1="17" y1="16" x2="17" y2="22"/></svg></div>
-            <h4>Tehničar vuče</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Mašinski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Projektovanje i održavanje mašinskih sistema, izrada tehničke dokumentacije i upravljanje mašinskim procesima. Program uključuje termodinamiku i hidrauliku."
-            data-posao="Fabrika, servis mašina, građevinska kompanija, auto-industrija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
-            <h4>Mašinski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Geodetski tehničar" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Premer terena, izrada geodetskih planova i karata, katastarsko snimanje i upotreba GPS instrumenata. Program uključuje GIS tehnologije i kartografiju."
-            data-posao="Geodetski zavod, građevinska kompanija, lokalna samouprava, projektni biro.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
-            <h4>Geodetski tehničar</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Elektrotehničar energetike" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Instalacija i održavanje elektroenergetskih sistema, elektroinstalaterski radovi i upravljanje elektroenergetskim postrojenjima."
-            data-posao="Elektroprivreda, fabrika, građevinska firma, elektroinstalaterska kompanija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            <h4>Elektrotehničar energetike</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Elektrotehničar računara" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Instalacija, konfiguracija i održavanje računarskih sistema i mreža. Program uključuje programiranje, operativne sisteme, mrežnu bezbednost i hardver."
-            data-posao="IT kompanija, servis elektronike, preduzeće, škola, telekomunikacije.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-            <h4>Elektrotehničar računara</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Filološka gimnazija" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Opšte obrazovanje sa profilisanjem u jezike i književnost. Intenzivna nastava stranih jezika priprema učenike za studije filologije, prevođenja i humanističkih nauka."
-            data-posao="Fakultet filologije, prevođenje, novinarstvo, diplomatija, nastava.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-            <h4>Filološka gimnazija</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Gimnazija opšteg smera" data-skola="Škola Sveti Nikola"
-            data-stepen="IV stepen" data-duration="4 godine"
-            data-opis="Sveobuhvatno opšte obrazovanje iz prirodnih i društvenih nauka koje priprema učenike za sve smerove studija. Razvija kritičko mišljenje i naučni pristup."
-            data-posao="Sve visokoškolske ustanove i fakulteti u Srbiji i inostranstvu.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></div>
-            <h4>Gimnazija opšteg smera</h4>
-            <span class="prog-badge badge-iv">IV stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-        </div>
-      </div><!-- /iv svnikola -->
-
-      <div class="stepen-section">
-        <div class="stepen-label">III stepen — 3 godine</div>
-        <div class="programs-grid">
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Trgovac" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Prodaja robe u maloprodajnim objektima, komunikacija s kupcima, upravljanje kasom i vođenje zaliha. Program uključuje osnove ekonomike i robnih znanja."
-            data-posao="Prodavnica, supermarket, tržni centar, kiosk, online prodaja.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-            <h4>Trgovac</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Kuvar" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Priprema jela po recepturama, osnove kuhinjske higijene i bezbednosti hrane, rad na različitim stanicama u kuhinji restorana ili hotela."
-            data-posao="Restoran, hotel, kantina, catering, fast food, škola.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-            <h4>Kuvar</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Konobar" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Opsluga gostiju, serviranje hrane i pića, blagajničke operacije i komunikacija sa klijentima. Program uključuje bonton i osnove somelijerstva."
-            data-posao="Kafić, restoran, hotel, catering, krstarica.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg></div>
-            <h4>Konobar</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Poslastičar" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Priprema torti, kolača, slatkiša, čokoladnih kreacija i fine konditorske robe. Program uključuje dekoraciju, sugarcraft i savremene tehnike poslastičarstva."
-            data-posao="Poslastičarnica, pekara, restoran, hotel, privatna radionica.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-            <h4>Poslastičar</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Vozač motornih vozila" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Upravljanje motornim vozilima kategorije C i D za profesionalni prevoz robe i putnika. Program uključuje saobraćajne propise, mehaniku i prvu pomoć."
-            data-posao="Transportna kompanija, autobusni prevoz, dostava, taxi.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-            <h4>Vozač motornih vozila</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Mesar" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Rasecanje i obrada mesa, priprema mesnih prerađevina, pakovanje i etiketiranje proizvoda. Program uključuje prehrambenu higijenu i HACCP standarde."
-            data-posao="Mesara, klanica, prehrambena industrija, supermarket.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
-            <h4>Mesar</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Pekar" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Priprema i pečenje hleba, peciva, pita i testa. Program uključuje različite vrste brašna, fermentaciju, rad u pekari i higijenu hrane."
-            data-posao="Pekara, fabrika hleba, hotel, restoran, konditorska industrija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 9V6a2 2 0 00-2-2H4a2 2 0 00-2 2v3"/><path d="M2 11c0-1.1.9-2 2-2h16a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3z"/></svg></div>
-            <h4>Pekar</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Bravar-zavarivač" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Izrada i montaža metalnih konstrukcija, zavarivanje metodama MIG, MAG, TIG i REL, obrada metala i čitanje tehničkih crteža."
-            data-posao="Fabrika, automehanička radionica, brodogradilište, metalska industrija.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            <h4>Bravar-zavarivač</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Mašinbravar" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Montaža, demontaža i popravka mašinskih sklopova, ležajeva i prenosnih mehanizama. Program uključuje struganje, glodanje i mernu opremu."
-            data-posao="Fabrika, servisna radionica, industrija, energetika.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
-            <h4>Mašinbravar</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal" onclick="openModal(this)"
-            data-name="Automehaničar" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Dijagnostika, servisiranje i popravka motornih vozila – motori, kočioni sistemi, elektronika i karoserija. Program uključuje OBD dijagnostiku i klimatizaciju."
-            data-posao="Auto-servis, diler vozila, transportna kompanija, rent-a-car.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-            <h4>Automehaničar</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-1" onclick="openModal(this)"
-            data-name="Zidar-fasader" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Zidanje nosećih i pregradnih zidova, postavljanje fasadnih sistema, malterisanje i izrađivanje obloga. Program uključuje čitanje građevinskih nacrta."
-            data-posao="Građevinska kompanija, privatna praksa, komunalna preduzeća.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <h4>Zidar-fasader</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-          <div class="prog-card reveal reveal-delay-2" onclick="openModal(this)"
-            data-name="Armirač-betonirac" data-skola="Škola Sveti Nikola"
-            data-stepen="III stepen" data-duration="3 godine"
-            data-opis="Postavljanje armaturnih mreža i šipki u oplatu, mešanje i ugradnja betona za konstrukcije mostova, zgrada i niskogradnje."
-            data-posao="Građevinska firma, niskogradnja, hidroizolacija, infrastrukturni projekti.">
-            <div class="prog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
-            <h4>Armirač-betonirac</h4>
-            <span class="prog-badge badge-iii">III stepen</span>
-            <span class="prog-hint">Detalji →</span>
-          </div>
-
-        </div>
-      </div><!-- /iii svnikola -->
-    </div><!-- /school-block svnikola -->
+    </div><!-- /iii stepen -->
 
   </div><!-- /panel-redovno -->
 
@@ -1877,18 +1583,21 @@
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
   <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-img" id="mImg">
+      <svg class="modal-img-icon" id="mImgIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"></svg>
+    </div>
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <span class="modal-skola" id="mSkola"></span>
-    <h3 class="modal-title" id="mName"></h3>
     <div class="modal-badges">
       <span class="prog-badge" id="mStepen"></span>
       <span class="modal-duration" id="mDuration"></span>
     </div>
+    <h3 class="modal-title" id="mName"></h3>
     <p class="modal-opis" id="mOpis"></p>
     <div class="modal-career">
       <div class="modal-career-label">Gde možete raditi</div>
       <p id="mPosao"></p>
     </div>
+    <div class="modal-links" id="mLinks"></div>
     <a href="#contact" class="btn-primary modal-cta" onclick="closeModal()">Upiši se danas →</a>
   </div>
 </div>
@@ -1966,13 +1675,34 @@
   function openModal(el) {
     const stepen = el.dataset.stepen;
     document.getElementById('mName').textContent = el.dataset.name;
-    document.getElementById('mSkola').textContent = el.dataset.skola;
     document.getElementById('mOpis').textContent = el.dataset.opis;
     document.getElementById('mPosao').textContent = el.dataset.posao;
     document.getElementById('mDuration').textContent = el.dataset.duration;
     const badge = document.getElementById('mStepen');
     badge.textContent = stepen;
     badge.className = 'prog-badge ' + (stepen.includes('IV') ? 'badge-iv' : stepen.includes('III') ? 'badge-iii' : 'badge-v');
+
+    // Populate download links
+    const linksEl = document.getElementById('mLinks');
+    linksEl.innerHTML = '';
+    if (el.dataset.plan) {
+      linksEl.innerHTML += `<a class="modal-link" href="${el.dataset.plan}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Nastavni plan
+      </a>`;
+    }
+    if (el.dataset.pitanja) {
+      linksEl.innerHTML += `<a class="modal-link" href="${el.dataset.pitanja}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Ispitna pitanja
+      </a>`;
+    }
+
+    // Copy icon from card to modal header
+    const cardIcon = el.querySelector('.prog-icon svg');
+    const mImgIcon = document.getElementById('mImgIcon');
+    if (cardIcon) mImgIcon.innerHTML = cardIcon.innerHTML;
+
     document.getElementById('modalOverlay').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
