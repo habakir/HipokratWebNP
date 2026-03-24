@@ -8,15 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #0a2540;
-    --teal: #0284c7;
-    --teal-dark: #0369a1;
-    --coral: #0ea5e9;
-    --cream: #f0f9ff;
+    --navy: #0b1f3a;
+    --teal: #00a896;
+    --teal-dark: #007a6e;
+    --coral: #f4623a;
+    --cream: #f7f4ef;
     --white: #ffffff;
-    --gray: #64748b;
-    --light: #dbeafe;
-    --text: #0f2035;
+    --gray: #6b7280;
+    --light: #e8e4de;
+    --text: #1a2332;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -46,7 +46,7 @@
     display: flex; align-items: center; gap: 10px;
     text-decoration: none;
   }
-  .nav-logo img { height: 44px; width: auto; background: #fff; border-radius: 8px; padding: 5px 10px; }
+  .nav-logo img { height: 44px; width: auto; filter: brightness(0) invert(1); }
 
   .nav-links {
     display: flex; align-items: center; gap: 2rem;
@@ -63,14 +63,14 @@
   .nav-links a:hover { color: var(--teal); }
 
   .nav-cta {
-    background: var(--teal);
+    background: var(--coral);
     color: var(--white) !important;
     padding: .5rem 1.2rem;
     border-radius: 6px;
     font-weight: 600 !important;
     transition: background .2s, transform .1s !important;
   }
-  .nav-cta:hover { background: var(--teal-dark) !important; transform: translateY(-1px); }
+  .nav-cta:hover { background: #d94e27 !important; transform: translateY(-1px); }
 
   .hamburger {
     display: none;
@@ -189,7 +189,7 @@
   }
 
   .btn-primary {
-    background: var(--teal);
+    background: var(--coral);
     color: var(--white);
     padding: .85rem 2rem;
     border-radius: 8px;
@@ -197,12 +197,12 @@
     font-weight: 600;
     font-size: .95rem;
     transition: background .2s, transform .15s, box-shadow .2s;
-    box-shadow: 0 4px 20px rgba(2,132,199,.35);
+    box-shadow: 0 4px 20px rgba(244,98,58,.3);
   }
   .btn-primary:hover {
-    background: var(--teal-dark);
+    background: #d94e27;
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(2,132,199,.45);
+    box-shadow: 0 8px 30px rgba(244,98,58,.4);
   }
 
   .btn-secondary {
@@ -352,12 +352,12 @@
   .about-badge {
     position: absolute;
     bottom: -20px; left: -20px;
-    background: var(--teal);
+    background: var(--coral);
     color: var(--white);
     border-radius: 12px;
     padding: 1rem 1.3rem;
     font-size: .85rem; font-weight: 600;
-    box-shadow: 0 8px 30px rgba(2,132,199,.3);
+    box-shadow: 0 8px 30px rgba(244,98,58,.3);
     max-width: 200px;
     line-height: 1.4;
   }
@@ -538,15 +538,15 @@
 
   /* ── ENROLLMENT CTA ── */
   #enroll {
-    background: linear-gradient(135deg, var(--navy) 0%, #0d3a6e 100%);
+    background: var(--coral);
     padding: 70px 5vw;
     text-align: center;
   }
   #enroll h2 { color: var(--white); }
   #enroll p { color: rgba(255,255,255,.8); margin: 1rem auto 2rem; max-width: 500px; }
   .btn-white {
-    background: var(--teal);
-    color: var(--white);
+    background: var(--white);
+    color: var(--coral);
     padding: .9rem 2.2rem;
     border-radius: 8px;
     text-decoration: none;
@@ -556,7 +556,6 @@
     transition: transform .15s, box-shadow .2s;
   }
   .btn-white:hover {
-    background: var(--teal-dark);
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(0,0,0,.2);
   }
@@ -1322,7 +1321,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       <a href="#" class="nav-logo" style="margin-bottom:.5rem; display:inline-flex;">
-        <img src="logo.png" alt="Škola Hipokrat Novi Pazar" style="height:40px; width:auto; background:#fff; border-radius:6px; padding:4px 10px;">
+        <img src="logo.png" alt="Škola Hipokrat Novi Pazar" style="height:40px; width:auto; filter: brightness(0) invert(1);">
       </a>
       <p>Stremimo ka izvrsnosti u obrazovanju. Jedna od prvih i najstarijih privatnih škola u Srbiji — od 1999. godine.</p>
       <div class="social-links">
