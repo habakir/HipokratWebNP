@@ -324,7 +324,7 @@
   }
   .about-card-main {
     background: var(--navy);
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     padding: 3rem;
     color: var(--white);
     position: relative; overflow: hidden;
@@ -350,16 +350,14 @@
   }
 
   .about-badge {
-    position: absolute;
-    bottom: -20px; left: -20px;
     background: var(--coral);
     color: var(--white);
-    border-radius: 12px;
-    padding: 1rem 1.3rem;
-    font-size: .85rem; font-weight: 600;
-    box-shadow: 0 8px 30px rgba(244,98,58,.3);
-    max-width: 200px;
+    border-radius: 0 0 20px 20px;
+    padding: .9rem 2rem;
+    font-size: .88rem; font-weight: 600;
+    display: flex; align-items: center; gap: .6rem;
     line-height: 1.4;
+    box-shadow: 0 8px 24px rgba(244,98,58,.25);
   }
 
   /* ── PROGRAMS ── */
